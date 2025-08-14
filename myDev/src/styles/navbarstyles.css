@@ -1,0 +1,47 @@
+.navContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.innerNavContainer {
+  display: flex;
+  width: 30rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(20, 20, 20, 0.705);
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.innerNavContainer .material-symbols-outlined {
+  padding: 0.5rem;
+}
+
+.innerNavContainer .material-symbols-outlined:hover {
+  cursor: pointer;
+}
+
+.innerNavContainer .material-symbols-outlined:focus {
+  background-color: rgb(75, 75, 75);
+}
+
+.innerNavContainer .material-symbols-outlined.active {
+  border: 1px solid rgb(31, 31, 31);
+  background-color: rgb(31, 31, 31);
+  border-radius: 50%;
+  transition: border 0.3s ease;
+}
+
+@media screen and (max-width: 40rem) {
+  .innerNavContainer {
+    width: 20rem;
+  }
+}

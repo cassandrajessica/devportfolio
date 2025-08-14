@@ -1,0 +1,39 @@
+.footerContainer {
+    background: radial-gradient(circle at center, rgb(59, 59, 59), black);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'title socials'
+    'credits credits';
+    justify-items: center;
+}
+
+.footerContainer h3 {
+    grid-area: title;
+}
+
+.footerContainer p {
+    grid-area: credits;
+}
+
+.socialsContainer img {
+    width: 2rem;
+    height: auto;
+}
+
+.socialsContainer img:hover {
+    cursor: pointer;
+}
+
+.socialsContainer {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    grid-area: socials;
+}
+
+.linkedin {
+    border-radius: 3rem; 
+}
+

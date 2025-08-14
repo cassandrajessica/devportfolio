@@ -1,0 +1,151 @@
+.skillsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "scroller scroller"
+    "card1 card2"
+    "card3 card4";
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 5rem;
+}
+
+.skillsContainer .title {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  grid-area: title;
+  font-weight: 400;
+}
+
+.skillsContainer .title::after {
+  content: "";
+  height: 2px;
+  flex: 1;
+  background-color: rgb(62, 62, 62);
+  margin-left: 1rem;
+}
+
+.scroller {
+  max-width: 50rem;
+  overflow: hidden;
+  grid-area: scroller;
+  justify-self: center;
+  align-self: center;
+  padding-bottom: 3rem;
+}
+.scroller p {
+  background-color: rgb(36, 36, 36);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-right: 1rem;
+}
+
+.innerScroller {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.skillsCard {
+  border: 1px solid gray;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30rem;
+  padding-bottom: 2rem;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.skillsCard span {
+  width: 100%;
+  background-color: rgb(44, 44, 44);
+  padding: 2rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.skillsCard h3 {
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.skillsCard p {
+  font-size: 0.8rem;
+  color: rgb(145, 144, 144);
+}
+
+.card1 {
+  grid-area: card1;
+  justify-self: center;
+}
+
+.card2 {
+  grid-area: card2;
+  justify-self: center;
+}
+
+.card3 {
+  grid-area: card3;
+  justify-self: center;
+}
+
+.card4 {
+  grid-area: card4;
+  justify-self: center;
+}
+
+@media screen and (max-width: 65rem) {
+  .scroller {
+    max-width: 40rem;
+  }
+
+  .skillsCard {
+    width: 26rem;
+  }
+}
+
+@media screen and (max-width: 51.563rem) {
+  .scroller {
+    max-width: 35rem;
+  }
+
+  .skillsCard {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  .skillsContainer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "scroller"
+      "card1"
+      "card2"
+      "card3"
+      "card4";
+  }
+
+  .scroller {
+    max-width: 15rem;
+  }
+}

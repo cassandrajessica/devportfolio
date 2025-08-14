@@ -1,0 +1,100 @@
+.aboutPageContainer {
+  padding-bottom: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "img ."
+    "img box1"
+    "img box2"
+    "img ."
+    "box3 box3";
+  gap: 1rem;
+}
+
+.aboutPageContainer h1 {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+  font-weight: 400;
+  grid-area: title;
+}
+
+.aboutPageContainer h1::after {
+  content: "";
+  height: 2px;
+  flex: 1;
+  background-color: rgb(62, 62, 62);
+  margin-left: 1rem;
+}
+
+.aboutImg img {
+  width: 25rem;
+  position: relative;
+  z-index: 2;
+}
+
+.aboutImg {
+  grid-area: img;
+  justify-self: center;
+  position: relative;
+  z-index: 1;
+}
+
+.gradientOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; 
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.aboutMeBox1 {
+  grid-area: box1;
+}
+
+.aboutMeBox2 {
+  grid-area: box2;
+}
+
+.aboutMeBox3 {
+  grid-area: box3;
+  border: 1px solid white;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: rgba(44, 44, 44, 0.531);
+}
+
+.card h3 {
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+}
+
+.card p {
+  color: rgb(145, 144, 144);
+  padding-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 40rem) {
+  .aboutPageContainer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "img"
+      "box1"
+      'box2'
+      'box3';
+  }
+
+  .aboutMeBox1, .aboutMeBox2, .aboutMeBox3 {
+    width: 20rem;
+  }
+
+  .aboutImg img {
+    width: 20rem;
+  }
+}
+
