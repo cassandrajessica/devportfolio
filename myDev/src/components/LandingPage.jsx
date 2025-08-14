@@ -26,7 +26,7 @@ function LandingPage({scrollTo, refs}) {
 
         <div className="landingPageBtns">
           <div className="resumeBtn">
-            <a href="/public/clv_resume.pdf"
+            <a href="/clv_resume.pdf"
             target='_blank'
             rel="noopener noreferrer">
               <button>Resume</button>
